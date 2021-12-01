@@ -15,11 +15,6 @@ def dividers():
     print ("All summa :",end = " ")
     print (a)
 
-
-
-
-
-
 def reversrs():
   print("\033[96m{}\033[0m".format("--------------------------------"))
   Number1 = int(input("What is your first number: "))
@@ -31,7 +26,7 @@ def reversrs():
   answer = []
   for g in summa:
     Divisors.append(g)
-    print("\033[91m{}\033[0m".format("--------------------------------"))
+
   print("Dis is yours range: ", Divisors)
   print("\033[91m{}\033[0m".format("--------------------------------"))
 
@@ -49,7 +44,6 @@ def reversrs():
     print("all integer divisors: ", sorted(answer))
 
 
-
 def main():
 
     if __name__ == '__main__':
@@ -61,13 +55,13 @@ def main():
             dividers()
         if choice.lower() == 'r':
             reversrs()
-        else:
-            print("\033[91myou chose the wrong letter")
-            exit(0)
 
 while True:
        main()
-       restart = input('do you want again?').lower()
+       restart = input('\033[97mdo you want again?').lower()
        if restart == "yes":
            main()
+       else:
+           print("\033[91mGoodbye")
+           exit(0)
 
