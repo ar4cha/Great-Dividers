@@ -1,4 +1,8 @@
 import math
+from datetime import date
+
+today = date.today()
+print("Today's date:", today)
 def dividers():
     print("\033[96m{}\033[0m".format("--------------------------------"))
     numb = int(input("What Number do you want: "))
@@ -15,6 +19,8 @@ def dividers():
     print ("All summa :",end = " ")
     print (a)
     f = open("summa.txt", "w")
+    f.write("date: " + format(today))
+    f.write("\n")
     f.write("Divisors:")
     f.write(format(i))
     f.write("\n")
@@ -48,6 +54,8 @@ def reversrs():
 
     print("all integer divisors: ", sorted(answer))
     f = open("summa.txt", "w")
+    f.write("date: " + format(today))
+    f.write("\n")
     f.write("Dis is yours range: " + format(Divisors))
     f.write("\n")
     f.write("all integer divisors: " + str(sorted(answer)))
