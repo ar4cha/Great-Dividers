@@ -14,6 +14,11 @@ def dividers():
     a = sum(summen)
     print ("All summa :",end = " ")
     print (a)
+    f = open("summa.txt", "w")
+    f.write("Divisors:")
+    f.write(format(i))
+    f.write("\n")
+    f.write("summa:" + format(a))
 
 def reversrs():
   print("\033[96m{}\033[0m".format("--------------------------------"))
@@ -42,6 +47,11 @@ def reversrs():
       answer.append(i)
 
     print("all integer divisors: ", sorted(answer))
+    f = open("summa.txt", "w")
+    f.write("Dis is yours range: " + format(Divisors))
+    f.write("\n")
+    f.write("all integer divisors: " + str(sorted(answer)))
+
 
 
 def main():
@@ -55,6 +65,7 @@ def main():
             dividers()
         if choice.lower() == 'r':
             reversrs()
+        
 
 while True:
        main()
